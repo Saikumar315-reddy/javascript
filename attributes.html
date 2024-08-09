@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+     <h1 id="sai">selecting by name id class</h1>
+     <h2 id="kumar">sai</h2>
+     <label for=""></label>
+
+     <button id="btn" onclick="alert('hello!')">button</button>
+     <button id="btns" onmouseenter="alert('hii madam!')">button</button>
+     <button id="btnss">button</button>
+
+
+     <script>
+        document.getElementById("sai").innerHTML="hello world!";
+        document.getElementById("kumar").style.color="red";
+
+        //eventlistner : used to attach an event handler to element
+
+        let btns = document.getElementById("btns")
+        btns.addEventListener("click",function(){
+            console.log("clicked")
+        })
+
+        let btnss = document.getElementById("btnss")
+        btnss.addEventListener("mouseenter",function(){
+            console.log("clicked")
+        })
+        btnss.addEventListener("mouseleave",function(){
+            console.log("mouse left")
+        })
+
+        //timing function: this function which will execute after specifiedgiven time interval
+        let a=setTimeout(function(){
+            alert("hello")
+        },3000)
+        console.log(a)
+        clearTimeout(a)
+
+        //setinterval : this function repeatdly executes a specified place of code at specified piece of code at specified time interval
+
+        let intervalID = setInterval(function(){
+            console.log("this will apper continously after every 2 seconds")
+        },2000);
+          setTimeout(function(){
+            clearInterval(intervalID)
+            console.log("it will stop after 7 sec")
+          },7000)
+     </script>
+</body>
+</html>
